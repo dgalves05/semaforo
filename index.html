@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semáforo Manual</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-image: url("Imagens/background.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+      }
+      .light {
+        width: 150px;
+        margin: 0px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Semáforo Manual</h1>
+    <div id="traffic-light">
+      <img class="light" src="Imagens/off.png" alt="Traffic light" />
+    </div>
+    <div class="btn-group">
+      <button class="btn btn-danger" onclick="ligarVermelho()">
+        Ligar Vermelho
+      </button>
+      <button class="btn btn-warning" onclick="ligarAmarelo()">
+        Ligar Amarelo
+      </button>
+      <button class="btn btn-success" onclick="ligarVerde()">
+        Ligar Verde
+      </button>
+      <button class="btn btn-secondary" onclick="desligarSemaforo()">
+        Desligar Semáforo
+      </button>
+    </div>
+
+    <script>
+      function ligarVermelho() {
+        document.querySelector(".light").src = "Imagens/red.png";
+      }
+
+      function ligarAmarelo() {
+        document.querySelector(".light").src = "Imagens/yellow.png";
+      }
+
+      function ligarVerde() {
+        document.querySelector(".light").src = "Imagens/green.png";
+      }
+
+      function desligarSemaforo() {
+        document.querySelector(".light").src = "Imagens/off.png"; // Deixa a imagem vazia para desligar
+      }
+    </script>
+  </body>
+</html>
